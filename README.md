@@ -1,44 +1,56 @@
-# ATLAS MCP Server
+# Blockchain Atlas MCP Server
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-1.6.1-green.svg)](https://modelcontextprotocol.io/)
 [![Version](https://img.shields.io/badge/Version-2.1.3-blue.svg)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Status](https://img.shields.io/badge/Status-Stable-blue.svg)]()
-[![GitHub](https://img.shields.io/github/stars/cyanheads/atlas-mcp-server?style=social)](https://github.com/cyanheads/atlas-mcp-server)
+[![GitHub](https://img.shields.io/github/stars/manolaz/blockchain-atlas-mcp-server?style=social)](https://github.com/manolaz/blockchain-atlas-mcp-server)
 
-ATLAS (Adaptive Task & Logic Automation System) is a Model Context Protocol server designed for LLMs to manage complex projects. Built with TypeScript and featuring Neo4j graph database integration, efficient project management, and collaborative features, ATLAS provides LLM Agents project management capabilities through a clean, flexible tool interface.
+ATLAS (Adaptive Task & Logic Automation System) is a Model Context Protocol server designed for deep blockchain analytics on Solana and Sui networks. Built with TypeScript and featuring Neo4j graph database integration, this tool enables comprehensive blockchain data analysis, transaction pattern recognition, and cross-chain analytics. ATLAS provides LLM Agents with powerful blockchain exploration capabilities through a clean, flexible tool interface.
 
-> **Important Version Note**: [Version 1.5.4](https://github.com/cyanheads/atlas-mcp-server/releases/tag/v1.5.4) is the last version that uses SQLite as the database. Version 2.0 and onwards has been completely rewritten to use Neo4j, which requires either:
+> **Important Version Note**: [Version 1.5.4](https://github.com/manolaz/blockchain-atlas-mcp-server/releases/tag/v1.5.4) is the last version that uses SQLite as the database. Version 2.0 and onwards has been completely rewritten to use Neo4j, which is essential for the complex relationship mapping required for blockchain analytics and requires either:
 > - Self-hosting using Docker (docker-compose included in repository)
 > - Using Neo4j AuraDB cloud service: https://neo4j.com/product/auradb/
 
 ## Table of Contents
 
-- [Overview](#overview)
-  - [Architecture & Components](#architecture--components)
-- [Features](#features)
-  - [Project Management](#project-management)
-  - [Collaboration](#collaboration)
-  - [Whiteboard System](#whiteboard-system)
-  - [Graph Database Integration](#graph-database-integration)
-  - [ATLAS Skills](#atlas-skills)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Project Structure](#project-structure)
-- [Tools](#tools)
-  - [Project Operations](#project-operations)
-  - [Member Management](#member-management)
-  - [Dependency Management](#dependency-management)
-  - [Whiteboard Operations](#whiteboard-operations)
-  - [Database Operations](#database-operations)
-  - [Database Backup and Restore](#database-backup-and-restore)
-  - [ATLAS Skills](#atlas-skills)
-- [Resources](#resources)
-  - [Project Resources](#project-resources)
-- [Database Backup and Restore](#database-backup-and-restore)
-- [Contributing](#contributing)
-- [License](#license)
+- [Blockchain Atlas MCP Server](#blockchain-atlas-mcp-server)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Architecture \& Components](#architecture--components)
+  - [Features](#features)
+    - [Project Management](#project-management)
+    - [Collaboration](#collaboration)
+    - [Whiteboard System](#whiteboard-system)
+    - [Graph Database Integration](#graph-database-integration)
+    - [ATLAS Skills](#atlas-skills)
+  - [Blockchain Analytics Features](#blockchain-analytics-features)
+  - [Installation](#installation)
+    - [Option 1: Install via npm](#option-1-install-via-npm)
+    - [Option 2: Install from source](#option-2-install-from-source)
+  - [Configuration](#configuration)
+    - [Environment Variables](#environment-variables)
+    - [MCP Client Settings](#mcp-client-settings)
+  - [Project Structure](#project-structure)
+  - [Tools](#tools)
+    - [Project Operations](#project-operations)
+    - [Member Management](#member-management)
+    - [Dependency Management](#dependency-management)
+    - [Whiteboard Operations](#whiteboard-operations)
+    - [Database Operations](#database-operations)
+    - [Database Backup and Restore](#database-backup-and-restore)
+    - [ATLAS Skills](#atlas-skills-1)
+  - [Resources](#resources)
+    - [Project Resources](#project-resources)
+  - [Database Backup and Restore](#database-backup-and-restore-1)
+    - [Automated Backups](#automated-backups)
+    - [Manual Backup and Restore (CLI)](#manual-backup-and-restore-cli)
+      - [Export (Backup)](#export-backup)
+      - [Import (Restore)](#import-restore)
+      - [List Backups](#list-backups)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Overview
 
@@ -146,6 +158,15 @@ Core Components:
 - **Modular Knowledge System:** Access and combine modular pieces of knowledge, best practices, and coding standards based on need.
 - **Hierarchical Organization:** Skills are organized into base, language/framework, and tool-specific categories with automatic dependency resolution.
 - **Customization:** Skills can be parameterized and customized based on project or user-specific requirements.
+
+## Blockchain Analytics Features
+
+- **Multi-Chain Support**: Analyze data from both Solana and Sui blockchains with unified interfaces
+- **Transaction Pattern Analysis**: Identify common patterns, anomalies, and relationships in blockchain transactions
+- **Wallet Relationship Mapping**: Visualize and analyze connections between wallets across multiple chains
+- **Smart Contract Analysis**: Deep dive into contract interactions, token movements, and protocol usage
+- **Performance Metrics**: Track and analyze network performance, gas usage, and transaction throughput
+- **Custom Analytics**: Build custom queries and analytics models using the power of Neo4j's graph database
 
 ## Installation
 
